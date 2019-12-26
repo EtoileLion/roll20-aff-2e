@@ -1,0 +1,259 @@
+/* General */
+.sheet-bg,
+p {
+	font-family: "Times New Roman", sarif;
+}
+.sheet-section {
+	border: 1px solid black;
+	padding: 3px;
+}
+.sheet-row {
+	margin-bottom: 3px;
+}
+.sheet-row:last-child {
+	margin-bottom: 0px;
+}
+.sheet-flexcontainer {
+	display: flex !important;
+}
+.sheet-smalltext {
+	font-size: x-small;
+}
+.sheet-flexcontainer {
+	display: flex;
+}
+.sheet-flex {
+	flex: 1;
+}
+.sheet-smush {
+	width: 0px;
+}
+.sheet-sectionhead p {
+    padding: 5px 0px 0px 5px;
+}
+.sheet-subtext {
+	font-size: x-small;
+}
+textarea {
+	width: 97%;
+}
+.sheet-hidestuff[value='on'] ~ .sheet-hideoutput,
+.sheet-hideinput {
+	display: none;
+}
+.sheet-hidestuff[value='on'] ~ .sheet-hideinput,
+.sheet-hidestuff[value='on'] .sheet-hideinput {
+	display: flex;
+}
+.sheet-right {
+	float: right;
+}
+
+.sheet-headertext p {
+	color: #800000;
+	font-size: large;
+	text-transform: capitalize;
+}
+
+/* Header */
+.sheet-header label {
+	display: inline;
+}
+.sheet-xp {
+    width: 100% !important;
+}
+.sheet-name {
+    font-size: 48px;
+    padding: 0px;
+    border: none;
+    color: black;
+}
+.sheet-pagetogglediv {
+}
+.sheet-header .sheet-flexcontainer > label {
+	width: auto;
+}
+
+/* Attributes */
+.sheet-5colrow {
+	margin-bottom: 3px;
+}
+.sheet-5colrow .sheet-col {
+	flex: 1;
+	text-align: center;
+}
+.sheet-attrroll {
+	display: block;
+	background: transparent;
+	border: none;
+	margin: 0 auto 0 auto !important;
+}
+.sheet-attrroll:hover label {
+	color: #880000;
+}
+.sheet-attrroll label {
+	cursor: pointer;
+	padding-top: 5px;
+	text-align: center;
+}
+.sheet-attrroll::before {
+	content: none !important;
+}
+.sheet-5colrow .sheet-col li {
+	text-align: left;
+	font-size: x-small;
+}
+.sheet-attrroll + input {
+    border: none;
+    font-size: xx-large;
+    text-align: center;
+}
+.sheet-attrroll ~ .sheet-subtext input {
+	font-size: x-small;
+	border: none;
+}
+
+div.sheet-attrroll label {
+	padding-top: 7px;
+	padding-right: 0px;
+}
+.sheet-sectionhead p,.sheet-name,.sheet-attrroll label {
+    font-size: x-large;
+}
+
+.sheet-no {
+	width: 2em;
+	text-align:center;	
+}
+.sheet-strongspan span {
+	font-weight: bold;
+}
+/* Spells Button Toggler */
+.sheet-skilltype[value='on'] ~ .sheet-isskill,
+.sheet-isnotskill {
+	display: none;
+}
+.sheet-skilltype[value='0'] ~ .sheet-isskill,
+.sheet-skilltype[value='on'] ~ .sheet-isnotskill{
+	display:inline;
+}
+
+/* Page Toggler */
+.sheet-sheettype[value='npc'] ~ .sheet-pagetoggledivpc,
+.sheet-pagetoggledivnpc,
+.sheet-page {
+	display: none;	
+}
+.sheet-sheettype[value='npc'] ~ .sheet-pagetoggledivnpc,
+.sheet-sheetpage[value="npc"] ~ .sheet-pagenpc,
+.sheet-sheetpage[value="1"] ~ .sheet-page1,
+.sheet-sheetpage[value="2"] ~ .sheet-page2,
+.sheet-sheetpage[value="3"] ~ .sheet-page3
+{
+	display: inline;
+}
+
+.sheet-pfcontainer {
+    display: inline;
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sheet-pfcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.sheet-pfradio {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 19px;
+	width: 19px;
+	background-color: #eee;
+	border-radius: 25%;
+	text-align: center;
+}
+.sheet-pfcontainer:hover input ~ .sheet-pfradio {
+    background-color: #ccc;
+}
+.sheet-pfcontainer input:checked ~ .sheet-pfradio:after {
+	display: block;
+}
+.sheet-sheetpage[value="npc"] ~ .sheet-pagenpc .sheet-pagetogglediv .sheet-pfcontainer input[value="npc"] ~ .sheet-pfradio,
+.sheet-sheetpage[value="3"] ~ .sheet-page3 .sheet-pagetogglediv .sheet-pfcontainer input[value="3"] ~ .sheet-pfradio,
+.sheet-sheetpage[value="1"] ~ .sheet-page1 .sheet-pagetogglediv .sheet-pfcontainer input[value="1"] ~ .sheet-pfradio,
+.sheet-sheetpage[value="2"] ~ .sheet-page2 .sheet-pagetogglediv .sheet-pfcontainer input[value="2"] ~ .sheet-pfradio {
+	background-color: #800000;
+	color: #aaa;
+}
+
+/* Roll Template */
+.sheet-rolltemplate-aff table {
+  width: 100%;
+	border: 1px solid;
+	border-radius: 4px;
+	color: black;
+  border-color: #880000;
+	font-size: 1em;
+	font-family: "Times New Roman", serif;
+	text-align: center;
+}
+
+.sheet-rolltemplate-aff th {
+	background-color: #880000;
+	color: #ffffff;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+	text-align: center;
+	font-weight: bold;
+}
+
+.sheet-rolltemplate-aff td {
+	padding: 5px;
+}
+
+.sheet-rolltemplate-aff tr:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-aff tr:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-aff .sheet-rolltemplate-byline {
+	 font-size: x-small;
+}
+
+.sheet-rolltemplate-aff .sheet-rolltemplate-fail {
+	color: #800000;
+}
+
+.sheet-rolltemplate-aff .sheet-rolltemplate-succ {
+	color: #008000;
+}
+
+.sheet-rolltemplate-aff .inlinerollresult {
+	background-color: transparent;
+	border: none !important;
+}
+
+.sheet-rolltemplate-aff .sheet-rolltemplate-resline {
+	font-weight: bold;
+}
+
+.sheet-rolltemplate-aff tr:last-child {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.sheet-rolltemplate-aff tr:first-child {
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}

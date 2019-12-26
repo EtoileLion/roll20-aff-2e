@@ -1,0 +1,285 @@
+<!---             Project AFF              --->
+<!---             Version 1.0              --->
+<!--- By EtoileLion (hmrhouse@hotmail.com) --->
+<div class='bg'>
+    <input type='hidden' name='attr_sheetpage' value="1" class="sheetpage">
+	<div class='page page1'>		
+		<div class='header'>		
+			<div class='flexcontainer'>
+			<input type='text' class='name flex' name='attr_character_name'>
+			<div class='pagetogglediv'>	
+				<label class='pfcontainer'>
+					<input name='attr_sheetpage'  type='radio' value="1" checked>
+					<span class="pfradio">1
+					</span>
+				</label>
+				<label class='pfcontainer'>
+					<input name='attr_sheetpage' type='radio' value="2" >
+					<span class="pfradio">2
+					</span>		
+				</label>	
+			</div>					
+            </div>
+			<div class='flexcontainer'>
+				<div class='flex flexcontainer'>
+					<label data-i18n="race">Race</label>
+					<input type='text' class='flex' name='attr_race'>
+				</div><div class='flex flexcontainer'>
+					<label data-i18n="socclass">Social Class</label>
+					<input type='text' class='flex' name='attr_social'>
+				</div>
+			</div>
+			<div class='flexcontainer'>
+				<div class='flex flexcontainer'>
+					<label data-i18n="age">Age</label>
+					<input type='text' class='flex' name='attr_age'>			
+				</div><div class='flex flexcontainer'>
+					<label data-i18n="gender">Gender</label>
+					<input type='text' class='flex' name='attr_gender'>			
+				</div>
+			</div>	
+		</div>
+		<div class='5colrow flexcontainer'>
+			<div class='col section'>
+				<button class='attrroll' type='roll' value='&{template:aff} {{result=[[2d6]]}} {{target=[[@{skill}]]}} {{char=@{character_name}}} {{attr=Skill}}'>
+					<label data-i18n="skill">Skill</label>
+				</button>
+				<input type='number' name='attr_skill' min=-2 max=12 value=4 step=1>
+				<div class='subtext'>
+					<span data-i18n='initial'>Initial</span>: <input type='number' name='attr_skillinit' min=-2 value=4 step=1>
+				</div>				
+			</div>
+			<div class='col section'>
+				<button class='attrroll' type='roll' value='&{template:aff} {{result=[[2d6}} {{target=[[@{stamina}]]}} {{char=@{character_name}}} {{attr=Stamina}}'>
+					<label data-i18n="stamina">Stamina</label>
+				</button>
+				<input type='number' name='attr_stamina' min=-2 max=24 value=8 step=1>
+				<div class='subtext'>
+					<span data-i18n='initial'>Initial</span>: <input type='number' name='attr_staminainit' min=-2 value=8 step=1>
+				</div>
+			</div>
+			<div class='col section'>
+				<button class='attrroll' type='roll' value='&{template:aff} {{result=[[2d6]]}} {{target=[[@{luck}]]}} {{char=@{character_name}}}  {{attr=Luck}}'>
+					<label data-i18n="luck">Luck</label>
+				</button>
+				<input type='number' name='attr_luck' min=-2 max=12 value=8 step=1>
+				<div class='subtext'>
+					<span data-i18n='initial'>Initial</span>: <input type='number' name='attr_luckinit' min=-2 value=8 step=1>
+				</div>				
+			</div>
+			<div class='col section'>
+				<button class='attrroll' type='roll' value='&{template:aff} {{result=[[2d6]]}} {{target=[[@{magic}]]}} {{char=@{character_name}}} {{attr=Magic}}'>
+					<label data-i18n="magic">Magic</label>
+				</button>
+				<input type='number' name='attr_magic' min=-2 max=12 value=0 step=1>				
+				<div class='subtext'>
+					<span data-i18n='initial'>Initial</span>: <input type='number' name='attr_magicinit' min=-2  value=0 step=1>
+				</div>				
+			</div>
+			<div class='col section'>
+				<div class='attrroll'>
+					<label data-i18n="mp">Magic Points</label>				
+				</div>
+				<input type='number' name='attr_mp' min=-2 value=0 step=1>		
+				<div class='subtext'>
+					<span data-i18n='initial'>Initial</span>: <input type='number' name='attr_mpinit' min=-2 value=0 step=1>
+				</div>
+			</div>
+		</div>
+		<div class='row flexcontainer'>
+			<div class='flex section talents'>
+				<div class='headertext'>
+					<p data-i18n='talents'>Talents</p>
+				</div>				
+				<fieldset class='repeating_talents'>
+					<input type='hidden' name='attr_talenthide' class='hidestuff' value="on">
+					<span class='hideoutput' name='attr_talentname'></span>
+					<input type='text' name='attr_talentname' class='hideinput'><input type='checkbox'  class='right' title="Toggle Input" name='attr_talenthide' data-i18n-placeholder='talentname' checked>
+					<textarea name='attr_talentnote'  class='hideinput' data-i18n-placeholder='talentnote'></textarea>					
+				</fieldset>
+			</div>
+			<div class='flex section talents'>
+				<div class='headertext'>
+					<p data-i18n='money'>Currency</p>
+				</div>
+				<div class='flexcontainer strongspan'>
+					<div class='flex flexcontainer'>
+						<span data-i18n='gp'>GP</span>: <input type='number' class='flex' name='attr_gp' value=0>
+					</div>
+					<div class='flex flexcontainer'>
+						<span data-i18n='sp'>SP</span>: <input type='number' class='flex' name='attr_sp' value=0>
+					</div>
+				</div>
+				<div class='flexcontainer strongspan'>
+					<span data-i18n='provisions'>Provisions</span>: <input type='number' name='attr_provisions' value=0>
+				</div>
+			</div>
+			<div class='flex section talents'>
+				<div class='headertext'>
+					<p data-i18n='xp'>Experience</p>
+				</div>
+					<input type='number' name='attr_xp' class='xp' value=0>
+			</div>
+		</div>
+		<div class='row flexcontainer'>
+			<div class='flex section sskills'>
+				<div class='headertext'>
+					<p data-i18n='sskills'>Special Skills</p>
+				</div>				
+				<fieldset class='repeating_sskills'>
+					<div class='flexcontainer'>
+					<input class='skilltype' type='hidden' name='attr_skilltype' value="">
+					<button class='isskill' type='roll' value='&{template:aff} {{result=[[2d6]]}} {{char=@{character_name}}}  {{attr=Skill}} {{special=@{skillname}}} {{target=[[@{skill}[Skill]+@{skillvalue}[Special Skill]]]}}'></button>
+					<button class='isnotskill' type='roll' value='&{template:aff} {{result=[[2d6]]}} {{char=@{character_name}}}  {{attr=Magic}} {{special=@{skillname}}} {{target=[[@{magic}[Magic]+@{skillvalue}[Special Skill]]]}}'></button>
+					<input type='text' class='flex smush' name='attr_skillname'>
+					<input type='checkbox' name='attr_skilltype' title="Is Magic Skill">
+					<input type='number' name='attr_skillvalue' value=1>
+					</div>
+				</fieldset>
+			</div>
+			<div class='flex section spells strongspan'>
+				<div class='headertext'>
+					<p data-i18n='spells'>Spells</p>
+				</div>
+				<span data-i18n='cantrips'>Cantrips</span>
+				<textarea name='attr_cantrips' class='cantrips'>
+				</textarea>
+				<fieldset class='repeating_spells'>
+					<input type='hidden' name='attr_spellhide' class='hidestuff' value="on">
+					<span class='hideoutput' name='attr_spellname'></span><span class='hideoutput'>(</span><span class='hideoutput' name='attr_spellpoints'></span><span class='hideoutput'>)</span>
+					<input type='text' name='attr_spellname' class='hideinput'>
+					<input type='number' name='attr_spellpoints' class='hideinput'>
+					<input type='checkbox'  class='right' name='attr_spellhide' title="Toggle Input" data-i18n-placeholder='spellname' checked>
+					<textarea name='attr_spellnote'  class='hideinput' data-i18n-placeholder='spellnote'></textarea>					
+				</fieldset>
+			</div>
+			<div class='flex section equipment'>
+				<div class='headertext'>
+					<p data-i18n='equipment'>Equipment</p>
+				</div>				
+				<fieldset class='repeating_equipment'>
+					<div class='flexcontainer'>
+						<input type='text' class='flex smush' name='attr_equipname'>
+						<input type='number' name='attr_equipquant'>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div class='flexcontainer'>
+		 <div class='flex section'>
+				<div class='headertext'>
+					<p data-i18n='weapon'>Weapons</p>
+					<div class='flexcontainer strongspan'>
+						<span class='flex' data-i18n='name'>Name</span>
+						<span class='no'>1</span>
+						<span class='no'>2</span>
+						<span class='no'>3</span>
+						<span class='no'>4</span>
+						<span class='no'>5</span>
+						<span class='no'>6</span>
+						<span class='no'>7</span>
+					</div>
+				</div>				
+				<fieldset class='repeating_weapon'>
+					<div class='flexcontainer'>
+						<input type='text' class='flex smush' name='attr_weaponname'>
+						<input type='text' class='no' name='attr_weaponnum1'>
+						<input type='text' class='no' name='attr_weaponnum2'>
+						<input type='text' class='no' name='attr_weaponnum3'>
+						<input type='text' class='no' name='attr_weaponnum4'>
+						<input type='text' class='no' name='attr_weaponnum5'>
+						<input type='text' class='no' name='attr_weaponnum6'>
+						<input type='text' class='no' name='attr_weaponnum7'>
+					</div>
+				</fieldset>		 
+		 </div>
+		 <div class='flex section'>
+				<div class='headertext'>
+					<p data-i18n='armor'>Armor</p>
+				</div>				
+					<div class='flexcontainer strongspan'>
+						<span class='flex' data-i18n='name'>Name</span>
+						<span class='no'>1</span>
+						<span class='no'>2</span>
+						<span class='no'>3</span>
+						<span class='no'>4</span>
+						<span class='no'>5</span>
+						<span class='no'>6</span>
+						<span class='no'>7</span>
+					</div>				
+				<fieldset class='repeating_armor'>
+					<div class='flexcontainer'>
+						<input type='text' class='flex smush' name='attr_armorname'>
+						<input type='text' class='no' name='attr_armornum1'>
+						<input type='text' class='no' name='attr_armornum2'>
+						<input type='text' class='no' name='attr_armornum3'>
+						<input type='text' class='no' name='attr_armornum4'>
+						<input type='text' class='no' name='attr_armornum5'>
+						<input type='text' class='no' name='attr_armornum6'>
+						<input type='text' class='no' name='attr_armornum7'>
+					</div>
+				</fieldset>		 
+		 </div>
+		</div>		
+	</div>
+	<div class='page page2'>		
+		<div class='header'>		
+			<div class='flexcontainer'>
+			<input type='text' class='name flex' name='attr_character_name'>
+			<div class='pagetogglediv'>	
+				<label class='pfcontainer'>
+					<input name='attr_sheetpage'  type='radio' value="1" checked>
+					<span class="pfradio">1
+					</span>
+				</label>
+				<label class='pfcontainer'>
+					<input name='attr_sheetpage' type='radio' value="2" >
+					<span class="pfradio">2
+					</span>		
+				</label>	
+			</div>					
+            </div>
+		</div>
+		<div class='section'>
+				<div class='headertext'>
+					<p data-i18n='treasure'>Treasure</p>
+				</div>				
+				<textarea name='attr_treasure'></textarea>		
+		</div>
+		<div class='section'>
+				<div class='headertext'>
+					<p data-i18n='notes'>Notes</p>
+				</div>				
+				<textarea name='attr_notes'></textarea>
+		</div>
+	</div>
+</div>
+<rolltemplate class="sheet-rolltemplate-aff">
+	<table class='sheet-aff-roll'>
+		<tr>
+			<th class='sheet-rolltemplate-nameline'>
+			 {{char}}
+			</th>
+		</tr>
+		<tr>
+			<td class='sheet-rolltemplate-byline'>
+			 {{attr}}{{#special}}+{{special}}{{/special}}
+			</td>
+		</tr>		
+		<tr>
+			<td class='sheet-rolltemplate-dieline'>
+				{{result}} vs. {{target}}
+			</td>
+		</tr>
+		<tr>
+			<td class='sheet-rolltemplate-resline'>
+	  			{{#rollGreater() result target}}
+				<span class='sheet-rolltemplate-fail'>Failure</span>
+				{{/rollGreater() result target}}
+				{{#^rollGreater() result target}}
+				<span class='sheet-rolltemplate-succ'>Success!</span>
+				{{/^rollGreater() result target}}
+			</td>
+		</tr>
+	</table>
+</rolltemplate>
